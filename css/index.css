@@ -145,8 +145,7 @@
 #heart{
     width: 0.9rem;
     height: 0.9rem;
-    background-color: #FED690;
-    background:url("../images/shape.png") no-repeat;
+    background:url("../images/love.png") no-repeat;
     background-size: 100% 100%;
 }
 
