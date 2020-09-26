@@ -1,15 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 .top{
     width: 100%;
-    height: 1.1rem;
+    height: 0.8rem;
     background-color: #002DFF;
 }
 .contentBg{
-    width: 70%;
-    height: calc(100vh - 1.1rem);
+    width: 65%;
+    height: calc(100vh - 0.8rem);
     margin: 0 auto;
     background: url("../images/bg.png") no-repeat;
     background-size: 100% 100%;
@@ -20,28 +21,211 @@
     margin: 0 auto;
 }
 .subject{
-    font-size: 0.3rem;
+    font-size: 0.28rem;
     color: #FD5800;
+    padding: 0.4rem 0;
     font-weight: bold;
 }
 .centerMusic{
     width: 6rem;
-    margin: 0 auto;
+    margin: 0.2rem auto;
     position: relative;
-    padding: 0.8rem 0;
 }
 .picturesBg{
-    width: 6.2rem;
-    height: 3.6rem;
+    width: 5rem;
+    height: 2.8rem;
     background: url("../images/border.png") no-repeat;
     background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.musicBg{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color:rgba(0, 0, 0, 0.48);
+    border-radius: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playBtn{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.2rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/play.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.musicBg img{
+    width: 38%;
+    height: 46%;
 }
 .butterfly{
-    width: 4.2rem;
-    height: 1.4rem;
-    background: url("../images/top.png") no-repeat;
+    width: 3.4rem;
+    height: 1.3rem;
+    background: url(../images/top.png) no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    left: 1rem;
-    top: 0.12rem;
+    left: 0.86rem;
+    top: -0.6rem;
+}
+.clickBtnFont{
+    font-size: 0.25rem;
+    position: absolute;
+    top: -0.35rem;
+    left: 1.8rem;
+    color: #fff;
+    display: none;
+}
+.functionField{
+   display: flex;
+}
+#content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content img{
+    width: 66%;
+    height: 66%;
+    border-radius: 6px;
+}
+#content .video{
+    width: 66%;
+}
+.list-unstyled,.collection,.sheet{
+    width: 50%;
+    list-style: none;
+    padding-left: 3rem;
+}
+.question_info{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 0.7rem;
+    background-color: #FED690;
+    border-radius: 0.3rem;
+    font-size: 0.2rem;
+    margin: 0.2rem 0;
+    padding-left: 0.3rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 0.25rem;
+}
+.btnItem{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/options.png") no-repeat;
+    background-size: 100% 100%;
+}
+.contentItem{
+    padding-left: 0.2rem;
+}
+.btnArr{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn{
+    width: 1.6rem;
+    height: 0.8rem;
+    color: #FCFF92;
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.2rem;
+}
+.btn-success{
+    background: url("../images/addBtn.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+.btn-info{
+    background: url("../images/btn.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 1rem;
+}
+.operations{
+    display: flex;
+}
+#unHeart,#heart{
+    height: 0.7rem;
+    font-size: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.collIconA{
+    display:inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("../images/love1.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.collIconN{
+    display:inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("../images/love.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.collenBorder{
+    display:inline-block;
+    width: 1.8rem;
+    height: 0.6rem;
+    background-color: #FFD7A3;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    font-size: 0.2rem;
+}
+.sheetCon{
+    display: flex;
+}
+.sheetIcon{
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("../images/answer1.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.sheetIconNo{
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("../images/answer.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.sheetLists{
+    width: 4rem;
+    height: 1.5rem;
+    background: url("../images/border.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+}
+.sheetUl{
+    display: flex;
+    align-items: center;
+}
+.sheetUl li{
+    font-size: 0.2rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    background: url("../images/options.png") no-repeat;
+    background-size: 100% 100%;
+    color: #FFFCA4;
+    margin: 0 0.2rem;
+    cursor: pointer;
 }
