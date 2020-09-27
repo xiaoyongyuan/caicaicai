@@ -59,6 +59,16 @@
     background-size: 100% 100%;
     cursor: pointer;
 }
+.playBtnIng{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.2rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/playing.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
 .musicBg img{
     width: 38%;
     height: 46%;
@@ -89,8 +99,8 @@
     justify-content: center;
 }
 #content img{
-    width: 66%;
-    height: 66%;
+    width: 58%;
+    height: 58%;
     border-radius: 6px;
 }
 #content .video{
@@ -133,6 +143,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.selectColor{
+    color: #FCFF92;
+}
 .btn{
     width: 1.6rem;
     height: 0.8rem;
@@ -140,16 +153,16 @@
     outline: none;
     cursor: pointer;
     margin: 0 0.2rem;
-}
-.btn-success{
-    background: url("../images/addBtn.png") no-repeat;
-    background-size: 100% 100%;
-    border-radius: 1rem;
-}
-.btn-info{
     background: url("../images/btn.png") no-repeat;
     background-size: 100% 100%;
     border-radius: 1rem;
+    border: none;
+}
+.btn-success{
+    background-color: #FBD431;
+}
+.btn-info{
+    background-color: #85C608;
 }
 .operations{
     display: flex;
@@ -167,6 +180,7 @@
     background: url("../images/love1.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
+    z-index: 10;
 }
 .collIconN{
     display:inline-block;
@@ -175,21 +189,48 @@
     background: url("../images/love.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
+    z-index: 10;
+}
+.collection{
+    position: relative;
 }
 .collenBorder{
     display:inline-block;
     width: 1.8rem;
     height: 0.6rem;
-    background-color: #FFD7A3;
+    background: url("../images/collection.png") no-repeat;
+    background-size: 100% 100%;
     color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0.4rem;
     font-size: 0.2rem;
+    position: absolute;
+    left: 3.5rem;
+    top: 0.1rem;
+}
+.collenBorder1{
+    display:inline-block;
+    width: 1.8rem;
+    height: 0.6rem;
+    background: url("../images/collection.png") no-repeat;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    font-size: 0.2rem;
+    position: absolute;
+    left:0.5rem;
+    top: 0.1rem;
+    font-size: 0.2rem;
+    color: #FFFFFF;
 }
 .sheetCon{
     display: flex;
+    position: relative;
 }
 .sheetIcon{
     width: 0.7rem;
@@ -197,6 +238,7 @@
     background: url("../images/answer1.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
+    z-index: 10;
 }
 .sheetIconNo{
     width: 0.7rem;
@@ -204,11 +246,12 @@
     background: url("../images/answer.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
+    z-index: 10;
 }
 .sheetLists{
     width: 4rem;
     height: 1.5rem;
-    background: url("../images/border.png") no-repeat;
+    background: url("../images/sheet.png") no-repeat;
     background-size: 100% 100%;
     display: flex;
     align-items: center;

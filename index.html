@@ -21,7 +21,7 @@
             <video class="video" style="display:none" src="#" controls="controls">
               您的浏览器暂不支持播放
             </video>
-            <audio  class="mp3" style="display:none" src="#" controls="controls">
+            <audio  class="mp3" id="mp3" style="display:none" src="#" controls="controls">
               您的浏览器暂不支持播放
             </audio>
           </div>
@@ -29,13 +29,13 @@
             <div class="musicBg">
               <img src="./images/music.png" alt="">
             </div>
-            <span class="playBtn" id="playBtn"></span>
+            <span id="playBtn"></span>
           </span>
         </div>
       </div>
       <div class="functionField">
-        <ul class="list-unstyled question" id="" name="">
-          <li class="question_info">1</li>
+        <ul class="list-unstyled question">
+          <li class="question_info"></li>
         </ul>
       </div>
       <div class="operations">
@@ -52,7 +52,7 @@
         <div class="sheetCon">
           <div class="sheetIconNo" id="closeCard" style="display: none"></div>
           <div class="sheetIcon" id="openCard"></div>
-          <span class="collenBorder">答题卡</span>
+          <span class="collenBorder1">答题卡</span>
         </div>
         <div class="sheetLists" id="answerCard" style="display: none">
             <ul class="sheetUl"></ul>
@@ -95,10 +95,17 @@
     }
   }, 1000);
   $("#playBtn").click(function () {
-    $(".mp3").trigger('play');
+    $(this).toggleClass("playBtnIng")
+    let _video = document.getElementById("mp3");
+    if(_video.paused){
+      _video.play();
+    }else{
+      _video.pause();
+    }
   })
   //展示考卷信息
   function showQuestion(id){
+    $("#playBtn").addClass("playBtn")
     $(".questioned").text(id+1);
     questioned = (id+1)/questions.length
     if(activeQuestion!=undefined){
@@ -150,6 +157,7 @@
       if(checkQues[i].id==id){
         $("#"+checkQues[i].item).find("input").prop("checked","checked");
         $("#"+checkQues[i].item).addClass("clickTrim");
+        console.log("#"+checkQues[i].item)
         $("#ques"+activeQuestion).removeClass("question_id").addClass("clickQue");
       }
     }
@@ -170,7 +178,7 @@
   function clickTrim(source){
     var id = source.id;
     $("#"+id).find("input").prop("checked","checked");
-    $("#"+id).addClass("clickTrim");
+    $("#"+id).addClass("selectColor");
     $("#ques"+activeQuestion).removeClass("question_id").addClass("clickQue");
     var ques =0;
     for(var i=0;i<checkQues.length;i++){
@@ -191,7 +199,7 @@
       var otherId =$(this).attr("id");
       if(otherId!=id){
         $("#"+otherId).find("input").prop("checked",false);
-        $("#"+otherId).removeClass("clickTrim");
+        $("#"+otherId).removeClass("selectColor")
       }
     })
     Question = activeQuestion;
