@@ -18,7 +18,7 @@
         <div class="picturesBg">
           <div id="content">
             <img class="img" src="http://img.58cdn.com.cn/dist/jxedt/app/static/img/kaoshi_p/5eb4d75agw1e290ji9hybj.jpg"/>
-            <video class="video" style="display:none" src="#" controls="controls">
+            <video class="video" id="videoMP4" style="display:none" src="#" controls="controls">
               您的浏览器暂不支持播放
             </video>
             <audio  class="mp3" id="mp3" style="display:none" src="#" controls="controls">
@@ -40,8 +40,13 @@
       </div>
       <div class="operations">
         <div class="collection">
-          <div id="unHeart"><span class="collIconA"> </span><span class="collenBorder">收藏本题</span> </div>
-          <div id="heart" style="display: none"><span class="collIconN"></span><span class="collenBorder">已收藏 </span></div>
+          <div class="sheetCon">
+            <div class="sheetIconNo" id="closeCard" style="display: none"></div>
+            <div class="sheetIcon" id="openCard"></div>
+            <span class="collenBorder1">答题卡</span>
+          </div>
+          <!--<div id="unHeart"><span class="collIconA"> </span><span class="collenBorder">收藏本题</span> </div>
+          <div id="heart" style="display: none"><span class="collIconN"></span><span class="collenBorder">已收藏 </span></div>-->
         </div>
         <div class="btnArr">
           <button class="btn btn-success" id="submitQuestions">提交试卷</button>
@@ -49,11 +54,7 @@
         </div>
       </div>
       <div class="sheet">
-        <div class="sheetCon">
-          <div class="sheetIconNo" id="closeCard" style="display: none"></div>
-          <div class="sheetIcon" id="openCard"></div>
-          <span class="collenBorder1">答题卡</span>
-        </div>
+
         <div class="sheetLists" id="answerCard" style="display: none">
             <ul class="sheetUl"></ul>
         </div>
@@ -106,6 +107,11 @@
   })
   //展示考卷信息
   function showQuestion(id){
+    var audio = document.getElementById("mp3");
+    audio.loop = false;
+    audio.addEventListener('ended', function () {
+      $("#playBtn").removeClass("playBtnIng").addClass("playBtn")
+    }, false);
     $("#playBtn").addClass("playBtn")
     $(".questioned").text(id+1);
     questioned = (id+1)/questions.length
@@ -219,6 +225,11 @@
 
   /*保存考题状态 已做答的状态*/
   function saveQuestionState(clickId){
+    $("#playBtn").removeClass("playBtnIng").addClass("playBtn")
+    let _video = document.getElementById("mp3");
+    _video.pause();
+    let _videome4 = document.getElementById("videoMP4");
+    _videome4.pause();
     showQuestion(clickId)
   }
 
@@ -273,6 +284,7 @@
     $("#nextQuestion").click(function(){
       if((activeQuestion+1)!=questions.length) showQuestion(activeQuestion+1);
       showQuestion(activeQuestion)
+      $("#playBtn").removeClass("playBtnIng").addClass("playBtn")
     })
   })
 </script>

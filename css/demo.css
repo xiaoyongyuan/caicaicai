@@ -50,7 +50,7 @@
     align-items: center;
     justify-content: center;
 }
-#playBtn{
+.playBtn{
     width: 1.0224rem;
     height: 1.0224rem;
     position: absolute;
@@ -62,10 +62,10 @@
 }
 .playBtnIng{
     position: absolute;
-    top: 2.5rem;
-    left: 2.2rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    bottom: -0.4rem;
+    left: 3.8rem;
+    width: 1.0224rem;
+    height: 1.0224rem;
     background: url("../images/playing.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -86,8 +86,8 @@
 .clickBtnFont{
     font-size: 0.426rem;
     position: absolute;
-    top: -0.5rem;
-    left: 3rem;
+    top: -0.15rem;
+    left: 3.1rem;
     color: #fff;
     display: none;
 }
