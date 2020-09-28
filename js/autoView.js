@@ -13,11 +13,11 @@
     docEl.firstElementChild.appendChild(metaEl);
     var recalc = function () {
         var width = docEl.clientWidth;
-        if (width / dpr > 2560) {
-            width = 2560 * dpr;
+        if (width / dpr > 4096) {
+            width = 4096 * dpr;
         }
         // 乘以100，px : rem = 100 : 1
-        docEl.style.fontSize = 100 * (width / 2560) + 'px';
+        docEl.style.fontSize = 100 * (width / 4096) + 'px';
     };
     recalc();
     if (!doc.addEventListener) return;

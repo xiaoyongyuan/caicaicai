@@ -5,35 +5,36 @@
 }
 .top{
     width: 100%;
-    height: 0.8rem;
+    height: 1.278rem;
     background-color: #002DFF;
 }
 .contentBg{
-    width: 65%;
-    height: calc(100vh - 0.8rem);
+    width: 25.6026rem;
+    min-height: calc(100vh - 1.278em);
     margin: 0 auto;
     background: url("../images/bg.png") no-repeat;
     background-size: 100% 100%;
 }
 .inside{
     width: 90%;
-    /*height: 96%;*/
     margin: 0 auto;
 }
 .subject{
-    font-size: 0.28rem;
+    font-size: 0.3834rem;
     color: #FD5800;
-    padding: 0.4rem 0;
+    padding:1rem 0;
     font-weight: bold;
+    padding-left: 1.278rem;
 }
 .centerMusic{
     width: 6rem;
     margin: 0.2rem auto;
     position: relative;
+    padding-top: 0.3rem;
 }
 .picturesBg{
-    width: 5rem;
-    height: 2.8rem;
+    width: 8.7969rem;
+    height: 5.0055rem;
     background: url("../images/border.png") no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -41,20 +42,20 @@
     justify-content: center;
 }
 .musicBg{
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 2.556rem;
+    height: 2.556rem;
     background-color:rgba(0, 0, 0, 0.48);
     border-radius: 0.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.playBtn{
+#playBtn{
+    width: 1.0224rem;
+    height: 1.0224rem;
     position: absolute;
-    top: 2.5rem;
-    left: 2.2rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    bottom: -0.4rem;
+    left: 3.8rem;
     background: url("../images/play.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -74,19 +75,19 @@
     height: 46%;
 }
 .butterfly{
-    width: 3.4rem;
-    height: 1.3rem;
+    width: 6.4rem;
+    height: 2rem;
     background: url(../images/top.png) no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    left: 0.86rem;
-    top: -0.6rem;
+    left: 1.2rem;
+    bottom: 3.8rem;
 }
 .clickBtnFont{
-    font-size: 0.25rem;
+    font-size: 0.426rem;
     position: absolute;
-    top: -0.35rem;
-    left: 1.8rem;
+    top: -0.5rem;
+    left: 3rem;
     color: #fff;
     display: none;
 }
@@ -99,8 +100,8 @@
     justify-content: center;
 }
 #content img{
-    width: 58%;
-    height: 2.2rem;
+    width: 70%;
+    height: 3.4rem;
     border-radius: 6px;
 }
 #content .video{
@@ -114,21 +115,20 @@
 .question_info{
     display: flex;
     align-items: center;
-    width: 90%;
-    height: 0.7rem;
+    width: 13.3977rem;
+    height:1.2rem;
     background-color: #FED690;
-    border-radius: 0.3rem;
-    font-size: 0.2rem;
-    margin: 0.2rem 0;
-    padding-left: 0.3rem;
+    border-radius: 0.5325rem;
+    font-size: 0.3834rem;
+    margin: 0.3195rem 0;
+    padding-left: 0.426rem;
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 0.25rem;
 }
 .btnItem{
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.8733rem;
+    height: 0.8733rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +136,7 @@
     background-size: 100% 100%;
 }
 .contentItem{
-    padding-left: 0.2rem;
+    padding-left: 0.1917rem;
 }
 .btnArr{
     width: 40%;
@@ -147,12 +147,12 @@
     color: #FCFF92;
 }
 .btn{
-    width: 1.6rem;
-    height: 0.8rem;
+    width: 2.982rem;
+    height: 1.2354rem;
     color: #FCFF92;
     outline: none;
     cursor: pointer;
-    margin: 0 0.2rem;
+    margin: 0 0.4rem;
     background: url("../images/btn.png") no-repeat;
     background-size: 100% 100%;
     border-radius: 1rem;
@@ -168,15 +168,15 @@
     display: flex;
 }
 #unHeart,#heart{
-    height: 0.7rem;
+    height: 1.1715rem;
     font-size: 0.2rem;
     display: flex;
     align-items: center;
 }
 .collIconA{
     display:inline-block;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 1.1715rem;
+    height: 1.1715rem;
     background: url("../images/love1.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -184,8 +184,8 @@
 }
 .collIconN{
     display:inline-block;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 1.1715rem;
+    height: 1.1715rem;
     background: url("../images/love.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -196,8 +196,8 @@
 }
 .collenBorder{
     display:inline-block;
-    width: 1.8rem;
-    height: 0.6rem;
+    width: 3.5784rem;
+    height: 1.0224rem;
     background: url("../images/collection.png") no-repeat;
     background-size: 100% 100%;
     color: #FFFFFF;
@@ -212,8 +212,8 @@
 }
 .collenBorder1{
     display:inline-block;
-    width: 1.8rem;
-    height: 0.6rem;
+    width: 3.5784rem;
+    height: 1.0224rem;
     background: url("../images/collection.png") no-repeat;
     background-size: 100% 100%;
     color: #FFFFFF;
@@ -233,24 +233,24 @@
     position: relative;
 }
 .sheetIcon{
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 1.1715rem;
+    height:1.1715rem;
     background: url("../images/answer1.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
     z-index: 10;
 }
 .sheetIconNo{
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 1.1715rem;
+    height:1.1715rem;
     background: url("../images/answer.png") no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
     z-index: 10;
 }
 .sheetLists{
-    width: 4rem;
-    height: 1.5rem;
+    width: 9rem;
+    min-height: 2.4rem;
     background: url("../images/sheet.png") no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -258,17 +258,20 @@
 }
 .sheetUl{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.4rem;
 }
 .sheetUl li{
     font-size: 0.2rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    width: 0.8733rem;
+    height: 0.8733rem;
     text-align: center;
     background: url("../images/options.png") no-repeat;
     background-size: 100% 100%;
     color: #FFFCA4;
-    margin: 0 0.2rem;
+    margin: 0.1rem 0.2rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
