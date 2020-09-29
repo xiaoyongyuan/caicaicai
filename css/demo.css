@@ -9,7 +9,7 @@
     background-color: #002DFF;
 }
 .contentBg{
-    width: 25.6026rem;
+    width: 24.6rem;
     min-height: calc(100vh - 1.278em);
     margin: 0 auto;
     background: url("../images/bg.png") no-repeat;
@@ -107,10 +107,15 @@
 #content .video{
     width: 66%;
 }
-.list-unstyled,.collection,.sheet{
+.sheet{
+    position: absolute;
+    top: 2rem;
+    right: 0.1rem;
+}
+.list-unstyled,.collection{
     width: 50%;
     list-style: none;
-    padding-left: 3rem;
+    padding-left: 2rem;
 }
 .question_info{
     display: flex;
@@ -249,29 +254,55 @@
     z-index: 10;
 }
 .sheetLists{
-    width: 9rem;
-    min-height: 2.4rem;
-    background: url("../images/sheet.png") no-repeat;
-    background-size: 100% 100%;
+    width: 7.4rem;
+    min-height: 2.6rem;
+    border-radius: 30px;
+    border: 1px solid #9f9286;
+    background-color: #FFFFFF;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 0.2rem 0.2rem;
 }
 .sheetUl{
     display: flex;
+    margin: 0 auto;
+    background-color: #f6d58e;
+    border-radius: 30px;
+    padding: 0.2rem 0.2rem;
+}
+.sheetUlCenter{
+    min-height: 2.4rem;
     flex-wrap: wrap;
-    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    background-color: #FEE4AA;
+    border-radius: 30px;
+    padding: 0.3rem;
 }
 .sheetUl li{
     font-size: 0.2rem;
-    width: 0.8733rem;
-    height: 0.8733rem;
-    text-align: center;
-    background: url("../images/options.png") no-repeat;
-    background-size: 100% 100%;
-    color: #FFFCA4;
     margin: 0.1rem 0.2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0.3834rem;
+}
+.questionId{
+    width: 0.8733rem;
+    height: 0.8733rem;
+    text-align: center;
+    background: url("../images/listBtn.png") no-repeat;
+    background-color: #979797;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+}
+.question_id{
+    background-color:#94d21c;
+    color:#FFFCA4;
+}
+.clickQue{
+    background-color:#94d21c;
+    color:#c3bbbb;
 }

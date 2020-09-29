@@ -40,23 +40,25 @@
       </div>
       <div class="operations">
         <div class="collection">
-          <div class="sheetCon">
+         <!-- <div class="sheetCon">
             <div class="sheetIconNo" id="closeCard" style="display: none"></div>
             <div class="sheetIcon" id="openCard"></div>
             <span class="collenBorder1">答题卡</span>
-          </div>
+          </div>-->
           <!--<div id="unHeart"><span class="collIconA"> </span><span class="collenBorder">收藏本题</span> </div>
           <div id="heart" style="display: none"><span class="collIconN"></span><span class="collenBorder">已收藏 </span></div>-->
         </div>
         <div class="btnArr">
           <button class="btn btn-success" id="submitQuestions">提交试卷</button>
+          <button class="btn btn-info" id="lastQuestion">上一题</button>
           <button class="btn btn-info" id="nextQuestion">下一题</button>
         </div>
       </div>
       <div class="sheet">
-
-        <div class="sheetLists" id="answerCard" style="display: none">
-            <ul class="sheetUl"></ul>
+        <div class="sheetLists" id="answerCard">
+          <div class="sheetUl">
+            <ul class="sheetUlCenter"></ul>
+          </div>
         </div>
       </div>
     </div>
@@ -129,6 +131,7 @@
       $(".img").attr('src',question.questionSource);
       $(".video").hide();
       $("#song").hide();
+      $(".clickBtnFont").hide();
     }else if('mp3'==question.questionType){
       $("#song").show();
       $(".mp3").attr('src',question.questionSource);
@@ -137,19 +140,13 @@
       $(".video").hide();
       $(".clickBtnFont").show();
     }else{
+      $(".clickBtnFont").hide();
       $("#song").hide();
       $(".video").show();
       $(".video").attr('src',question.questionSource);
       $(".img").hide();
       $(".mp3").trigger('pause');//暂停
     }
-
-
-
-
-
-
-
     var items = question.questionItems.split(";");
     var item="";
     for(var i=0;i<items.length;i++){
@@ -163,8 +160,7 @@
     for(var i=0;i<checkQues.length;i++){
       if(checkQues[i].id==id){
         $("#"+checkQues[i].item).find("input").prop("checked","checked");
-        $("#"+checkQues[i].item).addClass("clickTrim");
-        console.log("#"+checkQues[i].item)
+        $("#"+checkQues[i].item).addClass("selectColor");
         $("#ques"+activeQuestion).removeClass("question_id").addClass("clickQue");
       }
     }
@@ -186,6 +182,7 @@
     var id = source.id;
     $("#"+id).find("input").prop("checked","checked");
     $("#"+id).addClass("selectColor");
+    console.log("#"+id)
     $("#ques"+activeQuestion).removeClass("question_id").addClass("clickQue");
     var ques =0;
     for(var i=0;i<checkQues.length;i++){
@@ -279,6 +276,16 @@
     $("#submitQuestions").click(function(){
       layer.msg("已做答:"+($(".clickQue").length)+"道题，还有"+(questions.length-($(".clickQue").length))+"道题未完成")
       //alert("已做答:"+($(".clickQue").length)+"道题,还有"+(questions.length-($(".clickQue").length))+"道题未完成");
+    })
+    //上一题
+    $("#lastQuestion").click(function () {
+      if(activeQuestion==0){
+        layer.msg("当前为第一题");
+       // alert('當前為第一題');
+      }else{
+        showQuestion(activeQuestion-1);
+        $("#playBtn").removeClass("playBtnIng").addClass("playBtn");
+      }
     })
     //进入下一题
     $("#nextQuestion").click(function(){
